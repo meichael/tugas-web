@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SISTEM INFORMASI PERPUSTAKAAN</title>
+		<style>
+			.judul {
+				width: 100%;
+				height: 60px;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				background-color: #141014;
+				padding:20px 20px 20px 20px;
+				text-align: center;
+			}
+			
+			.sidebar {
+				width: 160px;
+				height: 100%;
+				position: fixed;
+				left: 0;
+				top: 100px;
+				background-color: #5d5d5d;
+				padding:20px 20px 20px 20px;
+			}
+			
+			.konten {
+				height: 100%;
+				width: 100%;
+				position: fixed;
+				top: 100px;
+				left: 200px;
+				background-color: #bbbbbb;
+				padding:10px 10px 10px 10px;
+			}
+			
+			#nama {
+				font-size: 50px;
+				color: white;
+				vertical-align: middle;
+			}
+			
+			.item {
+				font-size: 25px;
+				color: white;
+				
+			}
+			a {
+				text-decoration: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+	<div class="judul">
+		<font id="nama">SISTEM INFORMASI PERPUSTAKAAN</font>
+		
+	</div>
+	
+	<div class="sidebar">
+		<a class="item" href="menu.php?menu=anggota"><p>Anggota</p></a>
+		<a class="item" href="menu.php?menu=buku"><p>Buku</p></a>
+		<a class="item" href="menu.php?menu=pinjam"><p>Peminjaman</p></a>
+		<a class="item" href="menu.php?menu=kembali"><p>Pengembalian</p></a>
+		<a class="item" href="menu.php?menu=keluar"><p>Keluar</p></a>
+		
+	</div>
+	
+	<div class="konten">
+	<?php
+	if(isset($_GET['menu'])){
+		switch($_GET['menu']){
+		case "anggota" 	:
+			echo "ANGGOTA";
+			break;
+		case "buku" 	:
+			echo "BUKU";
+			break;
+		case "pinjam" 	:
+			echo "PINJAM";
+			break;
+		case "kembali"	:
+			echo "KEMBALI";
+			break;
+		case "keluar" 	:
+			?>
+			<script>
+				confirm(Apakah anda ya)
+			</script>
+			
+			<?php
+		default			:
+	}
+	}
+	
+	
+	?>
+	
+		
+	</div>
+		
+	</body>
+</html>
